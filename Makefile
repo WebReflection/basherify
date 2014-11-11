@@ -1,4 +1,4 @@
-.PHONY: build bundle watch minified jshint dependencies
+.PHONY: build bundle watch minified jshint size
 
 LICENSE = "/*! (C) Your Name - License */"
 

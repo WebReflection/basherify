@@ -2,7 +2,7 @@
 
 A basic setup to bring [browserify](https://github.com/substack/node-browserify#browserify) in your folder via bash scripts.
 
-## Getting started
+### Getting started
 
 In order to have this repo files in follow these steps in a terminal and after creating a new repository:
 ```bash
@@ -21,7 +21,20 @@ git push -u origin master
 ```
 From now on all commands in the [Makefile](Makefile) will be available.
 
-## options
+
+### auto dependencies if not present
+Please **bear in mind** if required modules are not installed globally, these will be installed locally.
+
+These are modules used by utils files:
+
+  * [browserify](https://github.com/substack/node-browserify#browserify)
+  * [watchify](https://github.com/substack/watchify#watchify)
+  * [jshint](https://github.com/jshint/jshint/#jshint-a-static-code-analysis-tool-for-javascript)
+  * [uglifyjs](https://github.com/mishoo/UglifyJS#uglifyjs--a-javascript-parsercompressorbeautifier)
+
+## make options
+following all possibility the `Makefile` offers.
+
 
 #### make
 will build through browserify and the minifier only after the linter has successfully parsed all files.
@@ -45,6 +58,7 @@ simply shows size of `js/bundle.max.js` and its minified `js/bundle.js`
 variable used to place a basic license in the minified version of the bundle.
 
 Please update it with any relevant info you think should ship with the project once minified.
+
 
 
 ### main folders structure
