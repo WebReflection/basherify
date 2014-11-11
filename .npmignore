@@ -1,0 +1,6 @@
+.DS_Store
+index.html
+Makefile
+node_modules/*
+src/*
+utils/*
