@@ -21,7 +21,33 @@ git push -u origin master
 ```
 From now on all commands in the [Makefile](Makefile) will be available.
 
-## structure
+## options
+
+#### make
+will build through browserify and the minifier only after the linter has successfully parsed all files.
+
+#### make bundle
+will simply run browserify against `src/main.js` and create the `js/bundle.max.js` file
+
+#### make watch
+will run `make bundle` automatically every time a file changes. Based on [watchify](https://github.com/substack/watchify#watchify)
+
+#### make minified
+run the bundler then minifies it and show the size in bytes
+
+#### make jshint
+run jshint against the whole `src/` folder and every subfolder looking for `.js` files
+
+#### make size
+simply shows size of `js/bundle.max.js` and its minified `js/bundle.js`
+
+#### LICENSE
+variable used to place a basic license in the minified version of the bundle.
+
+Please update it with any relevant info you think should ship with the project once minified.
+
+
+### main folders structure
 `main.js` is the file that will be used to initialize the project.
 
 You can `require("./local")` or `require("global")` modules from there and any other file inside the `src/` folder.
