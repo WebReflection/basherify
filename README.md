@@ -4,10 +4,10 @@ A basic setup to bring [browserify](https://github.com/substack/node-browserify#
 
 ## Getting started
 
-In order to have this repo files in follow these steps after creating a new repository:
+In order to have this repo files in follow these steps in a terminal and after creating a new repository:
 ```bash
-PROJECT=test
-NAME=WebReflection
+PROJECT=test # actually YOUR project name
+NAME=WebReflection # actually YOUR name
 # # # # # # # # #
 mkdir $PROJECT
 cd $PROJECT
