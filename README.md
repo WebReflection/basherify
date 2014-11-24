@@ -19,7 +19,7 @@ From now on all commands in the [Makefile](Makefile) will be available.
 
 Here how to eventually push this initial state to your new project:
 ```bash
-echo "" >README.md
+touch README.md
 git add .
 git commit -m "first commit"
 git remote add origin git@github.com:$NAME/$PROJECT.git
