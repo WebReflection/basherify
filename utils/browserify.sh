@@ -7,6 +7,7 @@ program () {
   else
     if [ "$(which $bin)" = "" ]; then
       mkdir -p node_modules
+      echo "installing $1"
       npm install $bin >/dev/null 2>&1
       bin="$2"
     fi
