@@ -2,12 +2,11 @@
 
 program () {
   local bin="$1"
-  local folder="$2"
-  if [ "$(which $bin)" = "" ]; then
-    mkdir -p node_modules
-    if [ -d "node_modules/$bin" ]; then
-      bin="$2"
-    else
+  if [ -d "node_modules/$bin" ]; then
+    bin="$2"
+  else
+    if [ "$(which $bin)" = "" ]; then
+      mkdir -p node_modules
       npm install $bin >/dev/null 2>&1
       bin="$2"
     fi

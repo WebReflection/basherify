@@ -2,11 +2,11 @@
 
 run () {
   local bin="uglifyjs"
-  if [ "$(which $bin)" = "" ]; then
-    mkdir -p node_modules
-    if [ -d "node_modules/uglify-js" ]; then
-      bin="node_modules/uglify-js/bin/uglifyjs"
-    else
+  if [ -d "node_modules/uglify-js" ]; then
+    bin="node_modules/uglify-js/bin/uglifyjs"
+  else
+    if [ "$(which $bin)" = "" ]; then
+      mkdir -p node_modules
       npm install "uglify-js@1" >/dev/null 2>&1
       bin="node_modules/uglify-js/bin/uglifyjs"
     fi
